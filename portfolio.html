@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Johns' Photography Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { ink: '#191916', cream: '#F5F2EB', bronze: '#AD8965' },
+        fontFamily: { display: ['Georgia', 'serif'] }
+      }}
+    }
+  </script>
+</head>
+<body class="bg-cream text-ink">
+
+<header class="sticky top-0 z-50 bg-cream/95 backdrop-blur border-b border-black/10">
+  <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+    <a href="index.html" class="font-display text-3xl tracking-widest">JOHNS'<span class="text-bronze">.</span></a>
+    <button id="menuBtn" class="md:hidden text-sm">MENU ☰</button>
+    <nav id="navMenu" class="hidden absolute top-full left-0 w-full bg-cream p-6 flex-col gap-6 md:static md:flex md:flex-row md:w-auto md:p-0">
+      <a href="index.html" class="text-sm hover:text-bronze">HOME</a>
+      <a href="about.html" class="text-sm hover:text-bronze">ABOUT</a>
+      <a href="portfolio.html" class="text-sm hover:text-bronze">PORTFOLIO</a>
+      <a href="services.html" class="text-sm hover:text-bronze">SERVICES</a>
+      <a href="contact.html" class="text-sm hover:text-bronze">CONTACT</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <p class="text-bronze text-xs tracking-[0.3em]">OUR PHOTOGRAPHY</p>
+    <h1 class="font-display text-5xl md:text-7xl mt-5">The Portfolio.</h1>
+    <p class="text-gray-500 max-w-xl mt-6 leading-8">
+      A curated collection of beautiful moments, unforgettable
+      destinations and extraordinary people.
+    </p>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-6 pb-24">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <article class="group overflow-hidden">
+        <div class="overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85"
+            alt="Wedding photography"
+            class="w-full h-[430px] object-cover group-hover:scale-105 transition duration-700">
+        </div>
+        <h2 class="font-display text-2xl mt-5">Wedding Photography</h2>
+        <p class="text-xs text-gray-500 tracking-widest mt-2">LOVE & CELEBRATION</p>
+      </article>
+
+      <article class="group overflow-hidden sm:mt-12">
+        <div class="overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85"
+            alt="Portrait photography"
+            class="w-full h-[430px] object-cover group-hover:scale-105 transition duration-700">
+        </div>
+        <h2 class="font-display text-2xl mt-5">Portrait Photography</h2>
+        <p class="text-xs text-gray-500 tracking-widest mt-2">PEOPLE & PERSONALITY</p>
+      </article>
+
+      <article class="group overflow-hidden">
+        <div class="overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=85"
+            alt="Mountain landscape"
+            class="w-full h-[430px] object-cover group-hover:scale-105 transition duration-700">
+        </div>
+        <h2 class="font-display text-2xl mt-5">Nature Landscape Photography</h2>
+        <p class="text-xs text-gray-500 tracking-widest mt-2">NATURE & BEAUTY</p>
+      </article>
+
+      <article class="group overflow-hidden">
+        <div class="overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=85"
+            alt="Fashion editorial"
+            class="w-full h-[430px] object-cover group-hover:scale-105 transition duration-700">
+        </div>
+        <h2 class="font-display text-2xl mt-5">Fashion Photography</h2>
+        <p class="text-xs text-gray-500 tracking-widest mt-2">STYLE & CREATIVITY</p>
+      </article>
+
+      <article class="group overflow-hidden sm:mt-12">
+        <div class="overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85"
+            alt="Commercial interior"
+            class="w-full h-[430px] object-cover group-hover:scale-105 transition duration-700">
+        </div>
+        <h2 class="font-display text-2xl mt-5">Commercial Photography</h2>
+        <p class="text-xs text-gray-500 tracking-widest mt-2">BRANDS & BUSINESS</p>
+      </article>
+
+      <article class="group overflow-hidden">
+        <div class="overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=85"
+            alt="Travel photography"
+            class="w-full h-[430px] object-cover group-hover:scale-105 transition duration-700">
+        </div>
+        <h2 class="font-display text-2xl mt-5">Travel Photography</h2>
+        <p class="text-xs text-gray-500 tracking-widest mt-2">PLACES & ADVENTURES</p>
+      </article>
+
+    </div>
+  </section>
+</main>
+
+<footer class="bg-black text-white px-6 py-14">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+    <div><h2 class="font-display text-3xl">JOHNS'<span class="text-bronze">.</span></h2><p class="text-gray-400 text-sm mt-4">Capturing life, one frame at a time.</p></div>
+    <div><h3 class="text-bronze text-xs tracking-widest">QUICK LINKS</h3><div class="grid grid-cols-2 gap-3 mt-5 text-sm text-gray-400"><a href="index.html">Home</a><a href="about.html">About</a><a href="portfolio.html">Portfolio</a><a href="services.html">Services</a><a href="contact.html">Contact</a></div></div>
+    <div><h3 class="text-bronze text-xs tracking-widest">CONTACT</h3><p class="text-sm text-gray-400 mt-5 leading-8">hello@johnsphotography.com<br>+1 555 014 2088<br>Available worldwide</p></div>
+  </div>
+  <p class="text-center text-gray-500 text-xs mt-12 border-t border-white/10 pt-6">© 2026 Johns' Photography Studio. ALL RIGHTS RESERVED.</p>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

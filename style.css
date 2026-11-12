@@ -1,0 +1,517 @@
+
+/* =========================================
+   JOHNS'S PHOTOGRAPHY STUDIO - PHOTOGRAPHY WEBSITE
+   Main Stylesheet
+========================================= */
+
+
+/* ---------- ROOT VARIABLES ---------- */
+
+:root {
+    --ink: #191916;
+    --cream: #F5F2EB;
+    --bronze: #AD8965;
+    --light-gray: #E8E5DE;
+    --text-gray: #77766F;
+    --white: #FFFFFF;
+
+    --transition: all 0.4s ease;
+}
+
+
+/* ---------- GLOBAL STYLING ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--ink);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+
+/* ---------- TYPOGRAPHY ---------- */
+
+h1,
+h2,
+h3,
+.font-display {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: normal;
+}
+
+h1 {
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    letter-spacing: -0.5px;
+}
+
+p {
+    line-height: 1.8;
+}
+
+
+/* ---------- HEADER ---------- */
+
+header {
+    transition: var(--transition);
+}
+
+header nav a {
+    position: relative;
+    transition: var(--transition);
+}
+
+header nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background: var(--bronze);
+    left: 0;
+    bottom: -7px;
+    transition: width 0.3s ease;
+}
+
+header nav a:hover::after,
+header nav a.text-bronze::after {
+    width: 100%;
+}
+
+header nav a:hover {
+    color: var(--bronze);
+}
+
+
+/* ---------- MOBILE MENU ---------- */
+
+#menuBtn {
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px 14px;
+    transition: var(--transition);
+}
+
+#menuBtn:hover {
+    background: var(--ink);
+    color: var(--white);
+}
+
+#navMenu {
+    z-index: 100;
+}
+
+#navMenu a {
+    display: inline-block;
+}
+
+
+/* ---------- HERO SECTION ---------- */
+
+.hero-section {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+}
+
+.hero-section h1 {
+    font-size: clamp(3rem, 8vw, 7rem);
+    line-height: 1.05;
+}
+
+.hero-section p {
+    max-width: 550px;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.btn-primary {
+    display: inline-block;
+    padding: 15px 35px;
+    background: var(--ink);
+    color: var(--white);
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: var(--transition);
+    border: 1px solid var(--ink);
+}
+
+.btn-primary:hover {
+    background: var(--bronze);
+    border-color: var(--bronze);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 15px 35px;
+    border: 1px solid var(--white);
+    color: var(--white);
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: var(--transition);
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--ink);
+}
+
+
+/* ---------- IMAGE GALLERY ---------- */
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-item h3 {
+    margin-top: 18px;
+    font-size: 25px;
+}
+
+
+/* ---------- ABOUT SECTION ---------- */
+
+.about-image {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+
+.about-content {
+    padding: 20px;
+}
+
+.about-content h2 {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.about-content p {
+    color: var(--text-gray);
+    margin-bottom: 20px;
+}
+
+
+/* ---------- PORTFOLIO SECTION ---------- */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.portfolio-card {
+    overflow: hidden;
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.06);
+}
+
+.portfolio-card h3 {
+    margin-top: 18px;
+    font-size: 25px;
+}
+
+.portfolio-card p {
+    color: var(--text-gray);
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-top: 8px;
+}
+
+
+/* ---------- SERVICES SECTION ---------- */
+
+.service-card {
+    padding: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.4);
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--bronze);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+.service-card h3 {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.service-price {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    margin: 25px 0;
+}
+
+.service-card ul {
+    list-style: none;
+    margin-top: 25px;
+}
+
+.service-card li {
+    padding: 10px 0;
+    color: var(--text-gray);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+
+/* ---------- CONTACT SECTION ---------- */
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--bronze);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background: #080807;
+    color: var(--white);
+}
+
+footer a {
+    transition: var(--transition);
+}
+
+footer a:hover {
+    color: var(--bronze);
+}
+
+footer h3 {
+    color: var(--bronze);
+}
+
+
+/* ---------- ANIMATIONS ---------- */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fade-up {
+    animation: fadeUp 1s ease forwards;
+}
+
+.animate-fade-in {
+    animation: fadeIn 1.2s ease forwards;
+}
+
+
+/* ---------- CUSTOM SCROLLBAR ---------- */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bronze);
+    border-radius: 10px;
+}
+
+::selection {
+    background: var(--bronze);
+    color: var(--white);
+}
+
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Tablets */
+
+@media (max-width: 1024px) {
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-section {
+        min-height: 75vh;
+    }
+
+    .gallery-item img,
+    .portfolio-card img {
+        height: 380px;
+    }
+}
+
+
+/* Mobile devices */
+
+@media (max-width: 640px) {
+
+    .hero-section {
+        min-height: 75vh;
+    }
+
+    .hero-section h1 {
+        font-size: 3.2rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img,
+    .portfolio-card img {
+        height: 350px;
+    }
+
+    .about-image {
+        height: 400px;
+    }
+
+    .contact-form {
+        padding: 22px;
+    }
+
+    .service-card {
+        padding: 25px;
+    }
+
+    footer {
+        text-align: left;
+    }
+}
+
+
+/* Small mobile devices */
+
+@media (max-width: 380px) {
+
+    .hero-section h1 {
+        font-size: 2.6rem;
+    }
+
+    .gallery-item img,
+    .portfolio-card img {
+        height: 290px;
+    }
+
+    .service-price {
+        font-size: 32px;
+    }
+}
+
+
+/* ---------- ACCESSIBILITY ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
